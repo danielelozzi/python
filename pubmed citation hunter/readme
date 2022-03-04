@@ -1,0 +1,6 @@
+How it works:
+
+Do you want to retrive a number of citation in pubmed search? First, performe you articles research and download the result in CSV format.
+
+Put your CSV file inside the same directory of py file. Open py file with an python IDE (such as the simples Thonny https://thonny.org/) and execute. 
+Then, the script will ask to you the csv name and after it create for you a new xlsx file with the citation number column
