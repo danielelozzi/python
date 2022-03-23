@@ -17,18 +17,19 @@ def coef_kr20(df, columns):
     k = len(columns)
     list_p = []
     list_q = []
-    list_pq = []
+    pq=0
     tot = []
     for j in range(k):
         pj = df[columns[j]].loc[(df[columns[j]]==1)].count()/n
         qj = df[columns[j]].loc[(df[columns[j]]==0)].count()/n
         list_p.append(pj)
         list_q.append(qj)
-        list_pq.append(pj*qj)
+        pq+=(pj*qj)
+
     for j in range(n):
         tot_j = df.iloc[j,:].sum()
         tot.append(tot_j)
     var = np.array(tot).var()
-    kr20 = (k/(k-1))*((1-np.array(list_pq).sum())/var)
+    kr20 = (k/(k-1))*(1-(pq/var))
     
     return kr20
