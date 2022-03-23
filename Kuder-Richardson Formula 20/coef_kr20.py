@@ -11,7 +11,7 @@ def coef_kr20(df, columns):
     import numpy as np
     import pandas as pd
     
-    df = df[dati]
+    df = df[columns]
     df = df.dropna()
     n = df.shape[0]
     k = len(columns)
