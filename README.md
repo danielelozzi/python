@@ -5,7 +5,7 @@ simple python scripts
 
 use it to retrieve the number of citations from the CSV file downloaded from pubmed after doing a search. 
 
-- KR_20: 
+- Kuder-Richardson Formula 20: 
 
 This script is useful if you need to know an internal consistency of an test composed by  dichotomous questions.
 
