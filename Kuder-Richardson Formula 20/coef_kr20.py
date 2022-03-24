@@ -27,5 +27,7 @@ def coef_kr20(df, columns):
         tot.append(tot_j)
     var = np.array(tot).var(ddof=1) # sample variance with DF = 1
     kr20 = (k/(k-1))*(1-(pq/var))
+    if kr20<0:
+        print('The value is negative due to a negative mean covariance between the elements. This violates the assumptions of the reliability model. It is advisable to check the encodings of the elements.')
     
     return kr20
